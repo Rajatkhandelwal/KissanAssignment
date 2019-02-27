@@ -1,0 +1,11 @@
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+#pyc file
+*.pyc
+
+#.idea folder
+KissanAssignment.iml
+*.xml
