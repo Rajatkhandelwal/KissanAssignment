@@ -7,6 +7,6 @@ from weather import views
 
 urlpatterns = [
     path('getListData', views.get),
-    path('saveData', views.post),
+    path('saveData', views.post)
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)

@@ -1,4 +1,6 @@
 import calendar
+from datetime import datetime
+
 from django.db import models
 from django.utils import timezone
 from .regionConstant import AreaList
@@ -7,12 +9,15 @@ class MetricsBaseManager(models.Manager):
 
     def add_or_update_record(self, value, region, month, year):
         try:
+            # func_tag = "MetricsBaseManager:add_record"
             day = calendar.monthrange(year, month)[1]
             dt = timezone.datetime(year, month, day)
             return self.update_or_create(record_date=dt,
                                          region=region,
                                          defaults={"value": value})
+
         except Exception as exc:
+            print("Message: ",exc,sep="-----------")
             raise exc
 
 
