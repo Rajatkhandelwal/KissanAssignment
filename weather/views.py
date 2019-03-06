@@ -86,7 +86,6 @@ def post(request):
         location = body.get("location", None)
         array = body.get("data", "")
 
-        print(body)
         if metric_type not in valid_types or location not in locations:
             return DataException("Please provide metric type and location within range")
 

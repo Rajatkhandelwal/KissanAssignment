@@ -17,7 +17,6 @@ class MetricsBaseManager(models.Manager):
                                          defaults={"value": value})
 
         except Exception as exc:
-            print("Message: ",exc,sep="-----------")
             raise exc
 
 
