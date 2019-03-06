@@ -1,5 +1,15 @@
 # Creating a RESTful API with Django
 
+There are three metrics: Tmax (max temperature), Tmin (min temperature) and Rainfall (mm), and 4 locations: UK, England, Scotland, Wales.
+The url format on S3 is:
+
+Whether Api : https://s3.eu-west-2.amazonaws.com/interview-question-data/metoffice/{metric}-{location}.json
+
+E.g:
+https://s3.eu-west-2.amazonaws.com/interview-question-data/metoffice/Rainfall-England.json
+(Note that Jan=1, Dec=12)
+ 
+
 ## Getting Started
 
 ### Pre-Step
@@ -38,13 +48,15 @@ Type http://localhost:8000/weather/getListData?type=Tmax&location=UK&start_date=
 
 ### Plugins
 Instructions on how to use them in your own application are linked below.
-| Plugin | README |
-| ------ | ------ |
-| Django | https://github.com/django/django/blob/master/README.rst |
-| restframework | https://github.com/encode/django-rest-framework/blob/master/README.md |
+
+| Plugin  | README |
+| ------------- | ------------- |
+| django  | https://github.com/django/django/blob/master/README.rst  |
+| restframework  |  https://github.com/encode/django-rest-framework/blob/master/README.md  |
+
+
 
 ## Acknowledgments
-
 * Django Documentation
 * Stackoverflow
 
